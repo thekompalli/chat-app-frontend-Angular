@@ -24,7 +24,13 @@ button:disabled{cursor:default;background:#7c5cbf94}
     color: white;
     text-align: center;
     font-size: 40px;
-    letter-spacing: 3px;
+    margin-top: 40px;
+}
+
+.head h1{
+    font-size: 70px;
+    letter-spacing: 6px;
+    margin-bottom: 50px;
 }
 
 .head a{
@@ -76,3 +82,4 @@ button:disabled{cursor:default;background:#7c5cbf94}
 .list-title{font-weight:500;font-size:18px;margin-bottom:4px;padding:12px 24px 0}
 
 .users{list-style-type:none;font-weight:300;padding:12px 24px 0}
+

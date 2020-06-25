@@ -1,0 +1,17 @@
+<div class="head">
+    <h1>CIA<span class="head_span">O</span></h1>
+    <p>A faster way to <span style="color: dodgerblue;">connect!</span></p>
+    <a href="https://www.linkedin.com/in/krishna-kompalli/" target="_blank">About</a>
+</div>
+<div class="centered-form">
+    <div class="centered-form__box">
+        <h1>Join Now</h1>
+        <form (submit) = "join(chatForm)" #chatForm = "ngForm">
+            <label>Username</label>
+            <input type="text" name="username" ngModel placeholder="Username" name = "username" required>
+            <label>Room</label>
+            <input type="text" name="room" ngModel placeholder="Room" name="room" required>
+            <button type="submit">Join</button>
+        </form>
+    </div>
+</div>

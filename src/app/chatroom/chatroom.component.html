@@ -1,0 +1,43 @@
+<div class="insider">
+
+
+    <div class="chat">
+         
+      <div id="sidebar" class="chat__sidebar">
+        <h2 class="room-title">Your Room:<br>{{userInfo.room}}</h2>
+        <h3 class="list-title">Users</h3>
+        <ul class="users" *ngFor = "let user of userInfo.users; let j = index">
+                <li>{{j+1}}. {{user.username}}</li>
+        </ul>
+        <a href="/" (click)="logout()" class="room-leave">Logout</a>
+      </div>
+      <div class="chat__main">
+          <div id="messages" class="chat__messages">
+            <div class="message" *ngFor = "let msg of lst">
+              <p>
+                <span class="message_name">{{msg.username}}</span>&nbsp;&nbsp;
+                 <span class="message__meta">{{msg.createdAt}}</span>
+              </p>
+               <a *ngIf = "isUrl(msg.msg)" href="{{msg.msg}}" target="_blank">My current Location</a>
+              <p *ngIf = "!isUrl(msg.msg)">{{msg.msg}}</p>
+          </div>
+    
+       
+          </div>
+    
+          <div class="compose">
+            <form class="form-inline" (submit) = "send(messageForm)" #messageForm = "ngForm">
+              <input class="form-control w-50" placeholder="Ex. It makes me feel..." ngModel name="message" #messageInput = "ngModel" required>
+              <span class="input-group-btn">
+                <button class="btn btn-outline-primary" type="submit">Send</button>&nbsp;
+                <button class="btn btn-outline-info" (click) = "getLocation()" >Send Location</button>
+              </span>
+            </form>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
